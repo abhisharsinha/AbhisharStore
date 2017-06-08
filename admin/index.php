@@ -29,7 +29,6 @@
       else
       {
           echo "<h4>Incorrect password</h4>";
-          echo password_hash($password, PASSWORD_DEFAULT);
       }
     }
     else

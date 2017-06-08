@@ -96,7 +96,10 @@
     str = "";
     str = s.val() + ':' + q.val();
     q.val(str);
-    alert(str);
+
+    if (str == ":") {
+      alert("Login to shop!");
+    }
   }
 </script>
 <?php echo ob_get_clean(); ?>

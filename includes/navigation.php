@@ -32,7 +32,7 @@
               <a class='test' tabindex="-1" href="#"><?php echo $parent['category'];?></a>
               <ul class="dropdown-menu">
                 <?php while($child = mysqli_fetch_assoc($children)): ?>
-                  <li><a href="?filtercat=<?=$child['id']?>" data-trigger="focus"><?php echo $child['category']; ?></a></li>
+                  <li><a href="index.php?filtercat=<?=$child['id']?>" data-trigger="focus"><?php echo $child['category']; ?></a></li>
                 <?php endwhile; ?>
               </ul>
             </li>

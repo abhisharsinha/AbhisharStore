@@ -1,8 +1,7 @@
 <?php
-  require_once 'core/init.php';
   session_start();
+  require_once 'core/init.php';
 
-  include_once 'helpers/helpers.php';
   include 'includes/head.php';
   include 'includes/navigation.php';
 ?>
@@ -11,6 +10,7 @@
   if (isset($_GET['logout'])) {
     session_destroy();
     header("Location: index.php");
+    exit();
   }
 ?>
 <!-- Login -->
@@ -28,17 +28,20 @@
     {
       $error = "Username does not exist!";
       header("Location: user.php?error=$error&login");
+      exit();
     }
     else
     {
       $row = mysqli_fetch_assoc($result);
       if (password_verify($password, $row['password'])) {
         $_SESSION['id'] = $row['id'];
-        header("Location: index.php");
+        header("Location: http://localhost/ecom/index.php");
+        exit();
       }
       else {
         $error =  "Incorrect passoword!";
-        header("Location: user.php?error=$error&login");
+        header("Location: http://localhost/ecom/user.php?error=$error&login");
+        exit();
       }
     }
   }
@@ -76,11 +79,12 @@
       mysqli_query($db, $query);
 
       header("Location: index.php");
-      die();
+      exit();
     }
     else {
       $error = "Username already exists!";
       header("Location: user.php?error=$error&signup");
+      exit();
     }
   }
 ?>

@@ -2,7 +2,6 @@
   require_once 'core/init.php';
   session_start();
 
-  include_once 'helpers/helpers.php';
   include 'includes/head.php';
   include 'includes/navigation.php';
   include 'includes/header_full.php';

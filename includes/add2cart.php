@@ -1,7 +1,6 @@
 <?php
-  require '../core/init.php';
   session_start();
-  echo "WHATUP\n";
+  require '../core/init.php';
   if (isset($_SESSION['id']))
   {
     echo "SESSION ID SET\n";
@@ -27,6 +26,6 @@
     }
   }
   else {
-    echo "SIGININ REQUIRED\n";
+    header("Location: ../index.php");
   }
  ?>

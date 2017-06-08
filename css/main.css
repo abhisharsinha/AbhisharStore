@@ -43,6 +43,13 @@ body {
 
 .product-tab .btn-success:hover {
   color: orange;
+  background-color: #520a75;
+  border: none;
+}
+
+.product-tab .btn-success:active {
+  color: orange;
+  background-color: #520a75;
   border: none;
 }
 

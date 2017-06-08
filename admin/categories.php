@@ -1,8 +1,8 @@
 <?php
   require_once '../core/init.php';
   session_start();
-  include '../includes/head.php';
-  include '../includes/navigation.php';
+  include 'includes/head.php';
+  include 'includes/navigation.php';
 
   //Authentication
   if (!isset($_SESSION['admin_id'])) {
